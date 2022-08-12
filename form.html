@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic page</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+ 
+
+<body>
+  
+
+      <fieldset>
+        <legend>Inscription:</legend>
+       
+            <form action="" method="">
+               
+           <table>
+            <tr>
+                <td>
+                    <label for="fname">First name </label><span style="color: red">*</span>&emsp;
+                </td>
+                <td><input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <tr>
+                <td><label for="lname">Last name </label><span style="color: red">*</span>&emsp;</td>
+                <td><input type="text" id="lname" name="lname"><br><br></td>
+            </tr>
+              
+            <tr>
+                <td><label for="lcodepostal">Code Postal </label><span style="color: red">*</span>&emsp;</td>
+                <td><input type="text" id="lcodepostal" name="lcodepostal"><br><br></td>
+            </tr>
+            
+            <tr>
+                <td><label for="Prederence">Préférence De Contact </label><span style="color: red">*</span>&emsp;</td>
+                <td>  
+                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Fax</label>
+                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Email</label>
+                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Telephone</label><br><br></td>
+            </tr>
+            
+           <tr>
+            <td>
+                <label for="pays">Pays </label><span style="color: red">*</span>&emsp;
+            </td>
+            <td>
+                <select name="pays" id="pays">
+                    <option value="france"> --Please select an option--</option></option>
+                    <option value="france">Morocco</option>
+                      <option value="france">France</option>
+                      <option value="espagne">Espagne</option>
+                      <option value="italie">Italie</option>
+                      <option value="royaume-uni">Royaume-Uni</option>
+                      <option value="canada">Canada</option>
+                      <option value="etats-unis">États-Unis</option>
+                      <option value="chine">Chine</option>
+                      <option value="japon">Japon</option>
+                  </select><br><br>
+
+            </td>
+           </tr>
+           
+              <tr>
+                <td> <label for="genre">Genre </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="radio" name="sexe" value="genre" id="genre" /> <label for="plus40">Masculain</label>
+                    <input type="radio" name="sexe" value="genre" id="genre" /> <label for="plus40">Feminin</label><br><br></td>
+              </tr>
+
+             <tr>
+                <td> <label for="lemail">Email </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="text" id="lemail" name="lemail"><br><br></td>
+             </tr>
+             <tr>
+                <td>  <label for="lpassword" >Password </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="password" id="lpassword" name="lpassword"  title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
+             </tr>
+             <tr>
+                <td> <label for="lverification"  >Verification Password </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="password" id="lverification" name="lverification"  title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
+             </tr>
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Envoyer">&emsp;
+                    <input type="submit" value="Effacer">&emsp;</td>
+              </tr>
+                        
+           </table>
+          
+           
+              </form>
+      
+      
+            
+            
+       </fieldset>
+
+   
+   
+</body>
+ 
+</html>
