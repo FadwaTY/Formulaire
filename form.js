@@ -8,6 +8,7 @@ function validate(){
  FormLast();
  FormAge();
  FormCode();
+ validegenre()
  FormEmail();
  FormPass();
  FormVerifi();
@@ -17,8 +18,10 @@ function FormAge(){
   let  dateN = document.getElementById("age").value;
   let  err = document.getElementById("ldatenaiss");
   var x = new Date().getFullYear() - new Date(dateN).getFullYear();
-  if(x < 18){
-      err.innerText = "enter birth date!";
+  if(dateN==""){
+    err.innerText = "enter birth date!";
+  }else if(x < 18){
+      err.innerText = "you should enter another one";
   }else{
    return true;
   }
@@ -88,21 +91,16 @@ function FormEmail(){
   }
 
 }
-function FormVerifi(){
-  
-  let verification=document.getElementById('  verification ').value; 
-  let vf=document.getElementById('  lverification '); 
-
-     if(verification == ""){  
- 
-      vf.innerText="verification of password must be at least 6 characters long."; 
-
-     }else{
-       return true;
-     }
-
-
+function validegenre(){
+  if ( document.getElementById("genreM").checked == false && document.getElementById("genreF").checked == false){
+      document.getElementById("lgenre").innerHTML = "entrez votre genre";
+  }
+  else{
+      document.getElementById("lgenre").innerHTML = "valider";
+  }
 }
+
+
 function FormGender(){
 
 
@@ -116,5 +114,20 @@ function FormGender(){
           return true;
           }
        
+
+}
+function FormVerifi(){
+ 
+  let pass=document.getElementById(" password").value; 
+  let vf=document.getElementById(" verification " ).value; 
+
+     if(vf=="" || vf != pass){  
+ 
+      document.getElementById("lverification").innerText = "ce n'est pas le même mot de passe";
+
+     }else{
+       return true;
+     }
+
 
 }
