@@ -9,42 +9,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic page</title>
     <link rel="stylesheet" href="form.css">
+    <script defer src="form.js"></script>
+
 
 </head>
  
 
 <body>
-  
-
+     <header>
+        <h4 id="DATE"></h4>
+     </header>
+     
+   
       <fieldset>
         <legend>Inscription:</legend>
        
-            <form action="" method="">
+            <form id="myform"   >
                
            <table>
             <tr>
                 <td>
-                    <label for="fname">First name </label><span style="color: red">*</span>&emsp;
+                    <label >First name </label><span style="color: red">*</span>&emsp;
                 </td>
-                <td><input type="text" id="fname" name="fname"><br><br></td>
+                <td>
+                    <input type="text" placeholder="Enter text"  id="name" ><br><br></td>
+                    <td ><p  id="lname"></p></td>
               
             </tr>
             <tr>
-                <td><label for="lname">Last name </label><span style="color: red">*</span>&emsp;</td>
-                <td><input type="text" id="lname" name="lname"><br><br></td>
+                <td><label>Last name </label><span style="color: red">*</span>&emsp;</td>
+                <td><input type="text"   placeholder="Enter text"  id="last" ><br><br></td>
+                <td><p  id="llast"></p></td>
+            </tr>
+            <tr>
+                <td><label >Age </label><span style="color: red">*</span>&emsp;</td>
+                <td><input type="date"   id="age"  ><br><br></td>
+                <td ><p id="ldatenaiss"></p></td>
             </tr>
               
             <tr>
-                <td><label for="lcodepostal">Code Postal </label><span style="color: red">*</span>&emsp;</td>
-                <td><input type="text" id="lcodepostal" name="lcodepostal"><br><br></td>
+                <td><label >Code Postal </label><span style="color: red">*</span>&emsp;</td>
+                <td><input type="text"  placeholder="Enter text"  id="codepostal"  ><br><br></td>
+                <td ><p id="lcodepostal"></p></td>
             </tr>
             
             <tr>
                 <td><label for="Prederence">Préférence De Contact </label><span style="color: red">*</span>&emsp;</td>
                 <td>  
-                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Fax</label>
-                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Email</label>
-                    <input type="checkbox" name="" value="pref" id="pref" /> <label for="Prederence">Telephone</label><br><br></td>
+                    <input type="checkbox" name="fax" value="pref" id="pref1" /> <label for="Prederence">Fax</label>
+                    <input type="checkbox" name="email" value="pref" id="pref2" /> <label for="Prederence">Email</label>
+              <br><br></td>
+                    <td><p id="btn"></p></td>
             </tr>
             
            <tr>
@@ -54,7 +69,7 @@
             <td>
                 <select name="pays" id="pays">
                     <option value="france"> --Please select an option--</option></option>
-                    <option value="france">Morocco</option>
+                    <option value="france" >Morocco</option>
                       <option value="france">France</option>
                       <option value="espagne">Espagne</option>
                       <option value="italie">Italie</option>
@@ -69,41 +84,41 @@
            </tr>
            
               <tr>
-                <td> <label for="genre">Genre </label><span style="color: red">*</span>&emsp;</td>
-                <td> <input type="radio" name="sexe" value="genre" id="genre" /> <label for="plus40">Masculain</label>
-                    <input type="radio" name="sexe" value="genre" id="genre" /> <label for="plus40">Feminin</label><br><br></td>
+                <td> <label for="genre">Genre </label><span style="color: red">*</span id="g">&emsp;</td>
+                <td> <input type="radio" name="gender" value="genre" id="genreM" /> <label for="plus40">Masculain</label>
+                    <input type="radio" name="gender" value="genre" id="genreF" /> <label for="plus40">Feminin</label><br><br></td>
               </tr>
 
              <tr>
-                <td> <label for="lemail">Email </label><span style="color: red">*</span>&emsp;</td>
-                <td> <input type="text" id="lemail" name="lemail"><br><br></td>
+                <td> <label >Email </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="text"  placeholder="Enter text" id="email" ><br><br></td>
+                <td ><p id="lemail"></p></td>
              </tr>
              <tr>
-                <td>  <label for="lpassword" >Password </label><span style="color: red">*</span>&emsp;</td>
-                <td> <input type="password" id="lpassword" name="lpassword"  title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
+                <td>  <label >Password </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="password"  placeholder="Enter text"  id="password"    title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
+                <td ><p id="lpassword"></p></td>
              </tr>
              <tr>
-                <td> <label for="lverification"  >Verification Password </label><span style="color: red">*</span>&emsp;</td>
-                <td> <input type="password" id="lverification" name="lverification"  title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
-             </tr>
+                <td> <label   >Verification Password </label><span style="color: red">*</span>&emsp;</td>
+                <td> <input type="password"  placeholder="Enter text"  id="verification"   title="Veuillez saisir un identifiant avec 4 à 8 chiffres  " required><br><br></td>
+                 <td ><p id="lverification"></p></td>
+            </tr>
               <tr>
                 <td></td>
-                <td><input type="submit" value="Envoyer">&emsp;
-                    <input type="submit" value="Effacer">&emsp;</td>
+                <td><button type="button" value="Envoyer" onclick=" validate()">Envoyer</button>&emsp;
+                 <button type="button" value="Effacer">Effacer</button>&emsp;</td>
               </tr>
                         
            </table>
           
-           
-              </form>
-      
-      
-            
+
             
        </fieldset>
-
-   
+        <p id="p1">push now</p>
+     
    
 </body>
+
  
 </html>
